@@ -11,11 +11,6 @@ class AppAsset extends AssetBundle
     /**
      * @inheritdoc
      */
-    public $sourcePath = __DIR__ . '/files/';
-
-    /**
-     * @inheritdoc
-     */
     public $css = [
         'css/site.css',
     ];
@@ -36,4 +31,13 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/files/';
+        parent::init();
+    }
 }
