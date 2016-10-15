@@ -82,7 +82,7 @@ class ItemController extends Controller
     {
         $item = null;
 
-        if (isset($_POST['ItemForm']['oldName'])) {
+        if (!empty($_POST['ItemForm']['oldName'])) {
             $item = $this->findItem($_POST['ItemForm']['oldName']);
         }
 
